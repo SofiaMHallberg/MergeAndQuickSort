@@ -12,11 +12,10 @@ public class CSQuickSort implements IntSorter {
             return;
 
         int part=inputArray[low];
-        int i=low;
+        int i=low+1;
         int j=high+1;
 
         while(true) {
-            i++;
             while (inputArray[i] < part && i < high) {
                 i++;
             }
@@ -38,7 +37,6 @@ public class CSQuickSort implements IntSorter {
         inputArray[low] = aux;
         quickSort(inputArray, low, j-1);
         quickSort(inputArray, j+1, high);
-
     }
 
     /*public static void main(String[] args) {

@@ -1,4 +1,5 @@
 public class CSMergeSorter implements IntSorter {
+
     @Override
     public void sort(int[] inputArray) {
         int size=inputArray.length;
@@ -11,11 +12,18 @@ public class CSMergeSorter implements IntSorter {
         if(high<=low)
             return;
 
-        int mid=low+(high-low)/2;
+        int mid = low + (high - low) / 2;
 
-        divide(inputArray, arrayCopy, low, mid);
-        divide(inputArray, arrayCopy, mid+1, high);
+        if((high-low)<2) {
+            CSInsertionSorter.sort(inputArray, low, high);
+        }
+        else {
+            divide(inputArray, arrayCopy, low, mid);
+            divide(inputArray, arrayCopy, mid + 1, high);
+        }
+
         conquer(inputArray, arrayCopy, low, mid, high);
+
     }
 
     private void conquer(int[] inputArray, int[] arrayCopy, int low, int mid, int high) {
@@ -39,5 +47,4 @@ public class CSMergeSorter implements IntSorter {
            }
         }
     }
-
 }
