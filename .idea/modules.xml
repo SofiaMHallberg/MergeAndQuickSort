@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/MergeAndQuickSort.iml" filepath="$PROJECT_DIR$/MergeAndQuickSort.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/MergeAndQuickSort.iml" filepath="$PROJECT_DIR$/.idea/MergeAndQuickSort.iml" />
     </modules>
   </component>
 </project>
