@@ -35,29 +35,17 @@ public class TestSort {
     }
 
     public static void main(String[] args) {
-//        IntSorter sorter = new InsertionSorter();
-//
-//        int firstN = 10000;
-//
-//        System.out.println("Unordered:");
-//        testSort(sorter, firstN, false);
-//        System.out.println("\nOrdered:");
-//        testSort(sorter, firstN, true);
-//
-//        System.out.println("\n"+sorter.getClass().getName()+".sort tested ok!");
-//        System.exit(0);
+        IntSorter sorter = new CSQuickSort();
 
-        IntSorter mergeSorter=new CSMergeSorter();
         int firstN = 10000;
 
         System.out.println("Unordered:");
-        testSort(mergeSorter, firstN, false);
+        testSort(sorter, firstN, false);
         System.out.println("\nOrdered:");
-        testSort(mergeSorter, firstN, true);
+        testSort(sorter, firstN, true);
 
-        System.out.println("\n"+mergeSorter.getClass().getName()+".sort tested ok!");
+        System.out.println("\n"+sorter.getClass().getName()+".sort tested ok!");
         System.exit(0);
-
 
     }
 }

@@ -2,9 +2,9 @@ public class CSQuickSort implements IntSorter {
     @Override
     public void sort(int[] inputArray) {
         ArrayUtil.shuffle(inputArray);
-
         int low=0;
-        int high=inputArray.length;
+        int high=inputArray.length-1;
+        quickSort(inputArray,low, high);
     }
 
     private void quickSort(int[] inputArray, int low, int high) {
@@ -15,18 +15,15 @@ public class CSQuickSort implements IntSorter {
         int i=low;
         int j=high+1;
 
-
-
         while(true) {
-
+            i++;
             while (inputArray[i] < part && i < high) {
                 i++;
             }
-
+            j--;
             while (inputArray[j] > part) {
                 j--;
             }
-
             if (i >= j)
                 break;
             else {
@@ -36,20 +33,19 @@ public class CSQuickSort implements IntSorter {
             }
         }
 
-            int aux = inputArray[j];
-            inputArray[j] = inputArray[low];
-            inputArray[low] = aux;
-
+        int aux = inputArray[j];
+        inputArray[j] = inputArray[low];
+        inputArray[low] = aux;
         quickSort(inputArray, low, j-1);
         quickSort(inputArray, j+1, high);
 
     }
 
-    public static void main(String[] args) {
+    /*public static void main(String[] args) {
         IntSorter testQuickSort=new CSQuickSort();
         int[] testArray1={5,3,6,4};
         testQuickSort.sort(testArray1);
         for(int i=0; i<testArray1.length; i++)
             System.out.print(testArray1[i]+" ");
-    }
+    }*/
 }
