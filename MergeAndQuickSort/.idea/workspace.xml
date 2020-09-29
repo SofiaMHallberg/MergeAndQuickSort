@@ -41,9 +41,16 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.TestSort">
+  <component name="RunManager" selected="Application.CSQuickSort">
     <configuration name="CSMergeSorter" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="CSMergeSorter" />
+      <module name="MergeAndQuickSort" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CSQuickSort" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="CSQuickSort" />
       <module name="MergeAndQuickSort" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -58,6 +65,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.CSQuickSort" />
         <item itemvalue="Application.TestSort" />
         <item itemvalue="Application.CSMergeSorter" />
       </list>
