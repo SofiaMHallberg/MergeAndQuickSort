@@ -1,7 +1,7 @@
 public class CSQuickSort implements IntSorter {
     @Override
     public void sort(int[] inputArray) {
-        ArrayUtil.shuffle(inputArray);
+        //ArrayUtil.shuffle(inputArray);
         int low=0;
         int high=inputArray.length-1;
         quickSort(inputArray,low, high);
@@ -10,6 +10,10 @@ public class CSQuickSort implements IntSorter {
     private void quickSort(int[] inputArray, int low, int high) {
         if(high<=low)
             return;
+
+//        if((high-low)<1) { // 1,2 and 3 generated approximately the same execution times
+//            CSInsertionSorter.sort(inputArray, low, high);
+//        }
 
         int part=inputArray[low];
         int i=low+1;
@@ -20,7 +24,7 @@ public class CSQuickSort implements IntSorter {
                 i++;
             }
             j--;
-            while (inputArray[j] > part) {
+            while (inputArray[j] > part) { // 1 > 1 --> bryt
                 j--;
             }
             if (i >= j)
@@ -32,8 +36,8 @@ public class CSQuickSort implements IntSorter {
             }
         }
 
-        int aux = inputArray[j];
-        inputArray[j] = inputArray[low];
+        int aux = inputArray[j]; // j=1
+        inputArray[j] = part;
         inputArray[low] = aux;
         quickSort(inputArray, low, j-1);
         quickSort(inputArray, j+1, high);
