@@ -35,7 +35,7 @@ public class TestSort {
     }
 
     public static void main(String[] args) {
-        IntSorter sorter = new CSQuickSort();
+        IntSorter sorter = new CSMergeSorter();
 
         int firstN = 10000;
 

@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d671ed10-b6ca-479c-9dd9-e6c9f4e973bc" name="Default Changelist" comment="" />
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -16,6 +15,10 @@
     </option>
   </component>
   <component name="ProjectId" id="1i9RNdD1HEodbflc1Q0H4bSx7Ul" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent">
     <property name="Downloaded.Files.Path.Enabled" value="false" />
     <property name="Repository.Attach.Annotations" value="false" />
@@ -28,18 +31,6 @@
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\MergeAndQuickSort\src" />
     </key>
-  </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
   </component>
   <component name="RunManager" selected="Application.TestSort">
     <configuration name="CSMergeSorter" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
@@ -71,6 +62,7 @@
       </list>
     </recent_temporary>
   </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -83,5 +75,23 @@
       <updated>1601317782539</updated>
     </task>
     <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state width="1398" height="231" key="GridCell.Tab.0.bottom" timestamp="1601557535323">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state width="1398" height="231" key="GridCell.Tab.0.bottom/0.23.1440.877@0.23.1440.877" timestamp="1601557535323" />
+    <state width="1398" height="231" key="GridCell.Tab.0.center" timestamp="1601557535322">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state width="1398" height="231" key="GridCell.Tab.0.center/0.23.1440.877@0.23.1440.877" timestamp="1601557535322" />
+    <state width="1398" height="231" key="GridCell.Tab.0.left" timestamp="1601557535321">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state width="1398" height="231" key="GridCell.Tab.0.left/0.23.1440.877@0.23.1440.877" timestamp="1601557535321" />
+    <state width="1398" height="231" key="GridCell.Tab.0.right" timestamp="1601557535322">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state width="1398" height="231" key="GridCell.Tab.0.right/0.23.1440.877@0.23.1440.877" timestamp="1601557535322" />
   </component>
 </project>
