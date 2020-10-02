@@ -1,7 +1,10 @@
+import java.util.Random;
+
 public class CSQuickSort implements IntSorter {
+    private InsertionSorter insertionSorter=new InsertionSorter();
     @Override
     public void sort(int[] inputArray) {
-        //ArrayUtil.shuffle(inputArray);
+      //  ArrayUtil.shuffle(inputArray);
         int low=0;
         int high=inputArray.length-1;
         quickSort(inputArray,low, high);
@@ -11,11 +14,26 @@ public class CSQuickSort implements IntSorter {
         if(high<=low)
             return;
 
-//        if((high-low)<1) { // 1,2 and 3 generated approximately the same execution times
+//        if((high-low)<40) {
 //            CSInsertionSorter.sort(inputArray, low, high);
 //        }
 
-        int part=inputArray[low];
+//        Random randomGenerator = new Random();
+//        int r = low + randomGenerator.nextInt(high-low);
+        int mid=low+(high-low)/2;
+        int medianArray[]={inputArray[low], inputArray[mid], inputArray[high]};
+        insertionSorter.sort(medianArray);
+        //int median=medianArray[1];
+
+        int medianIndex;
+        if(medianArray[0]<medianArray[1] && medianArray[0]<medianArray[2])
+            medianIndex=0;
+        else if (medianArray[1]<medianArray[0] && medianArray[1]<medianArray[2])
+            medianIndex=1;
+        else
+            medianIndex=2;
+
+        int part=inputArray[medianIndex];
         int i=low+1;
         int j=high+1;
 
@@ -24,7 +42,7 @@ public class CSQuickSort implements IntSorter {
                 i++;
             }
             j--;
-            while (inputArray[j] > part) { // 1 > 1 --> bryt
+            while (inputArray[j] > part) {
                 j--;
             }
             if (i >= j)
@@ -36,18 +54,10 @@ public class CSQuickSort implements IntSorter {
             }
         }
 
-        int aux = inputArray[j]; // j=1
+        int aux = inputArray[j];
         inputArray[j] = part;
         inputArray[low] = aux;
         quickSort(inputArray, low, j-1);
         quickSort(inputArray, j+1, high);
     }
-
-    /*public static void main(String[] args) {
-        IntSorter testQuickSort=new CSQuickSort();
-        int[] testArray1={5,3,6,4};
-        testQuickSort.sort(testArray1);
-        for(int i=0; i<testArray1.length; i++)
-            System.out.print(testArray1[i]+" ");
-    }*/
 }

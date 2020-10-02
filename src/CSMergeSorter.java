@@ -14,7 +14,7 @@ public class CSMergeSorter implements IntSorter {
 
         int mid = low + (high - low) / 2;
 
-        if((high-low)<40) {
+        if((high-low)<60) {
             CSInsertionSorter.sort(inputArray, low, high);
         }
         else {
